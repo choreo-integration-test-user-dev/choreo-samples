@@ -10,3 +10,18 @@ endpoints:
     # Accepted values: Project|Organization|Public.
     networkVisibility: Public
     schemaFilePath: openapi.yaml
+dependencies:
+    serviceReferences:
+    - name: database:devHrDb
+      connectionConfig: 01ef9dbd-0cbf-1066-8dc8-3b7ae7769346
+      env:
+      - from: HostName
+        to: CHOREO_DATABASE_CONNECTION_DB_HOST
+      - from: Port
+        to: CHOREO_DATABASE_CONNECTION_DB_PORT
+      - from: Username
+        to: CHOREO_DATABASE_CONNECTION_DB_USER
+      - from: Password
+        to: CHOREO_DATABASE_CONNECTION_DB_PASSWORD
+      - from: DatabaseName
+        to: CHOREO_DATABASE_CONNECTION_DB_NAME
