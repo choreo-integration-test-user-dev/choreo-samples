@@ -20,3 +20,18 @@ spec:
       # This is only applicable to REST endpoint types.
       # The path should be relative to the Docker context.
       schemaFilePath: openapi.yaml
+  outbound:
+      serviceReferences:
+      - name: database:devHrDb
+        connectionConfig: 01ef9dbf-0b8e-1d8e-8a4e-d71eb93f4e59
+        env:
+        - from: HostName
+          to: CHOREO_DATABASE_CONNECTION_HOSTNAME
+        - from: Port
+          to: CHOREO_DATABASE_CONNECTION_PORT
+        - from: Username
+          to: CHOREO_DATABASE_CONNECTION_USERNAME
+        - from: Password
+          to: CHOREO_DATABASE_CONNECTION_PASSWORD
+        - from: DatabaseName
+          to: CHOREO_DATABASE_CONNECTION_DATABASENAME
