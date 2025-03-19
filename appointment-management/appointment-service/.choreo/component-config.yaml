@@ -23,7 +23,7 @@ spec:
   outbound:
       serviceReferences:
       - name: database:devHrDb
-        connectionConfig: 01f003a6-0746-17de-9583-92c38aa44304
+        connectionConfig: 01f00488-7694-19e6-83e8-d0a928b41c89
         env:
         - from: HostName
           to: CHOREO_DATABASE_CONNECTION_HOSTNAME
